@@ -1,0 +1,66 @@
+{%extends 'base.html'%}
+
+{%block title%}
+    Elective Selection
+{%endblock title%}
+
+{%block body%}
+
+<form>
+<center>
+    <div class="my-5 mx-5">
+        <div class="border border-primary border-3 rounded">
+            <h4>First Preference</h4>
+
+            <div>
+            {%for j in electives%}
+
+                <input type="radio" class="my-2 " name="choice1" value={{j}}>
+                <label>{{j}}</label>
+                <br>
+
+            {%endfor%}
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="my-5 mx-5">
+        <div class="border border-danger border-3 rounded">
+            <h4>Second Preference</h4>
+            <div>
+            {%for j in electives%}
+
+                <input type="radio" class="my-2 " name="choice2" value={{j}}>
+                <label>{{j}}</label>
+                <br>
+
+            {%endfor%}
+            </div>
+        </div>
+    </div>
+
+
+    <div class="my-5 mx-5">
+        <div class="border border-warning border-3 rounded">
+            <h4>Third Preference</h4>
+
+            <div>
+            {%for j in electives%}
+
+                <input type="radio" class="my-2 " name="choice3" value={{j}}>
+                <label>{{j}}</label>
+                <br>
+
+            {%endfor%}
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-primary">Submit Preferences</button>
+</center>
+
+</form>
+{%endblock body%}
+
